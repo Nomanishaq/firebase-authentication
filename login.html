@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login with Firebase</title>
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/app.css">
+</head>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyCjovSQRKfRjqDARhv6m3SV0E1m1GbKhuM",
+            authDomain: "social-auth-e7217.firebaseapp.com",
+            databaseURL: "https://social-auth-e7217.firebaseio.com",
+            projectId: "social-auth-e7217",
+            storageBucket: "social-auth-e7217.appspot.com",
+            messagingSenderId: "928670112586",
+            appId: "1:928670112586:web:0f565a048862675e313fb3",
+            measurementId: "G-HMNLPTK2CC"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+    <body>
+
+    <div id="loader">
+        <div id="status">&nbsp;</div>
+      </div>
+        <!-- top heading -->
+        <h1 class="login-main-heading">Firebase Authentication</h1>  
+        <!-- main container -->
+        <div class="container-form">
+            <!-- logo -->
+            <div class="logo">
+                <img src="./img/logo.png" alt="login-account">
+            </div>
+
+        <form action="#" method="POST">
+            <!-- input type email -->
+            <div class="input-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="input" placeholder="Enter your Email" required> 
+            </div>
+            <!-- input type password -->
+            <div class="input-field">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="input" placeholder="Enter your password" required>
+            </div>
+
+            <!-- input type forget -->
+            <div class="input-field">
+            <span class="forget" id="succcess"></span>
+            <input type="checkbox"><span> Rember me</span>
+            </div>
+
+                <!-- submit button -->
+            <div class="input-field">
+                <input type="button" onclick="login()" value="Login" class="btn">
+            </div>
+
+        </form>    
+        </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
